@@ -1,0 +1,73 @@
+Notes on Introducton to Scala for Java Developers
+
+No primitives
+Combines functional and OO both are first class citizens
+More active libraries than Java: Play Framework, Akka, Spark
+Scala activator This is what runs
+
+Scala is immutable. This means that you cannot change/mutate variables in an
+object. Basically, you will create a new object with the new variable.
+
+Java uses hibernate to deal with mutable things
+
+Immutable world is good for concurrency. Concurrency deals with multiple threads
+modifiying the same object.
+
+var allows mutation(Don't use this in Scala). val is immutable.(USE VAL)
+
+Compiler can figure out type for the most part. Sometimes, it might not be able
+to, in which case, type should be specified
+
+No primitives in Scala
+
+
+FUNCTIONAL
+//This is a function named f that takes in a String and returns an Int
+val f = (s:String) => s.length
+
+//An equivalent way to express the above
+def f(s: String): Int = s.length
+
+We can do things like map and stuff because functions are first class citizens.
+Meaning that they can passed around to other functions.
+
+List("asdf", "zx").map(f)
+//returns List[Int] = List(4,2)
+
+//Anonymous function
+List("asdf", "zx").map(s => s.length)
+
+Almost everything returns a value, like Racket. "asdf" is an expression that
+returns the value "asdf"
+
+def f(s:String) = {
+  val i = s.length
+  i//Don't need return because i is an expression that returns
+   //This adheres to the concept of an immutable world
+}
+
+trait = abstract class
+
+
+PATTERN MATCHING
+Partial functions only take in specific types. Applies to a subset of inputs
+
+
+OPTIONS
+o: Option(String) = None
+Good for cleaning up NullPointerExceptions
+ Has vocab like None, and Some. //TODO: Gotta look those up
+What are they used for and why are they good at cleaning NullPointerExceptions?
+
+Basically, when you get a null as a return value from a map, how do you know
+that it is because it couldn't find the key, or because the value was null?
+Options will help solve this issue
+
+
+CASE CLASSES
+
+
+REACTIVE(Just means threads aren't blocked when waiting for a response)
+Scala has futures built-in
+
+Another thing is composition
