@@ -1,0 +1,22 @@
+CASE CLASSES
+____________
+
+What is the difference between case class and a normal class?
+Case classes have a default == method
+Able to recursively pattern match on them and their sub-classes
+Case classes are Serializable. Normal classes are not.
+
+
+
+PARTIALLY APPLIED FUNCTIONS
+___________________________
+Functions that create functions, where some of the arguments are pre-applied. Basically, you fill in some arguments already.
+
+
+PARTIAL FUNCTIONS
+_________________
+Created with an isDefinedAt method, which is a check on whether or not the function should be applied with the apply method
+
+IMPLICITS
+_________
+These are cool. This is about wrapping already existing classes with additional functionality. For example, creating an isOdd method for Int.
