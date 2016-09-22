@@ -20,3 +20,8 @@ Created with an isDefinedAt method, which is a check on whether or not the funct
 IMPLICITS
 _________
 These are cool. This is about wrapping already existing classes with additional functionality. For example, creating an isOdd method for Int.
+
+But they are confusing as hell. Look this exercise over. There were a few that I couldn't get right.
+
+TRAITS
+______
